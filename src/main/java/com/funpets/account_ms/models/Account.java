@@ -8,25 +8,17 @@ public class Account {
     @Id
     private String nickname;
     private String nombre;
-    private Date edad;
-    private String especie;
+    private Date fechaNacimiento;
+    private String tipo;
     private String description;
     private String username;
 
-    public Account(String username, String nickname, String nombre, Date edad, String especie, String description) {
-        this.username = username;
+    public Account(String nickname, String nombre, Date fechaNacimiento, String tipo, String description, String username) {
         this.nickname = nickname;
         this.nombre = nombre;
-        this.edad = edad;
-        this.especie = especie;
+        this.fechaNacimiento = fechaNacimiento;
+        this.tipo = tipo;
         this.description = description;
-    }
-
-    public String getUsername(){
-        return username;
-    }
-
-    public void setUsername(){
         this.username = username;
     }
 
@@ -46,27 +38,35 @@ public class Account {
         this.nombre = nombre;
     }
 
-    public Date getEdad() {
-        return edad;
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setEdad(Date edad) {
-        this.edad = edad;
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
-    public String getEspecie() {
-        return especie;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setEspecie(String especie) {
-        this.especie = especie;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
